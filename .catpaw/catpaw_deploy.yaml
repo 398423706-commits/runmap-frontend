@@ -1,0 +1,25 @@
+# CatPaw 部署配置文件
+# 用于发布到美团内部测试环境
+
+type: webstatic  # 前端项目使用 webstatic 类型
+
+# 构建配置
+build:
+  command: "npm run build"
+  output_dir: "dist"
+  node_version: "18"
+
+# 部署配置
+deploy:
+  type: webstatic
+  cdn_enabled: true
+  
+# 项目信息
+project:
+  name: runmap-frontend
+  description: "跑步应用前端 - 支持主题切换功能"
+  
+# 环境变量示例
+env:
+  test:
+    swimlane: "your-swimlane"  # 替换为你的泳道名称

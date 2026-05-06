@@ -1,0 +1,6 @@
+# CAT 配置文件
+cat.enabled=true
+cat.app.name=runmap-frontend
+cat.monitor.http=true
+cat.monitor.ajax=true
+cat.server.ip=localhost
