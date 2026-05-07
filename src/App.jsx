@@ -6,6 +6,7 @@ function App() {
   const [count, setCount] = useState(0)
   const [activeTab, setActiveTab] = useState('explore')
   const { currentTheme, switchTheme } = useTheme()
+  const [filterOpen, setFilterOpen] = useState(false)
 
   return (
     <div className="app-container">
@@ -35,6 +36,36 @@ function App() {
               <p>发现最好的跑步路线</p>
             </div>
 
+            {/* 筛选栏 */}
+            <div className="filter-bar">
+              <button
+                className="filter-button"
+                onClick={() => setFilterOpen(!filterOpen)}
+              >
+                🔽 筛选
+              </button>
+              <button
+                className="retry-button"
+                onClick={() => setCount(0)}
+              >
+                🔄 重试
+              </button>
+            </div>
+
+            {filterOpen && (
+              <div className="filter-panel">
+                <label>
+                  <input type="checkbox" defaultChecked /> 5km 以下
+                </label>
+                <label>
+                  <input type="checkbox" defaultChecked /> 5-10km
+                </label>
+                <label>
+                  <input type="checkbox" defaultChecked /> 10km 以上
+                </label>
+              </div>
+            )}
+
             <div className="content-box">
               <h2>热门路线</h2>
               <button
@@ -47,19 +78,35 @@ function App() {
                 <div className="route-card">
                   <h3>城市公园</h3>
                   <p>5.2 km • 中等难度</p>
-                  <button className="primary-button">查看详情</button>
+                  <div className="card-buttons">
+                    <button className="primary-button">查看详情</button>
+                    <button className="secondary-button">收藏</button>
+                  </div>
                 </div>
                 <div className="route-card">
                   <h3>河滨步道</h3>
                   <p>8.5 km • 困难</p>
-                  <button className="primary-button">查看详情</button>
+                  <div className="card-buttons">
+                    <button className="primary-button">查看详情</button>
+                    <button className="secondary-button">收藏</button>
+                  </div>
                 </div>
                 <div className="route-card">
                   <h3>山间小道</h3>
                   <p>12 km • 困难</p>
-                  <button className="primary-button">查看详情</button>
+                  <div className="card-buttons">
+                    <button className="primary-button">查看详情</button>
+                    <button className="secondary-button">收藏</button>
+                  </div>
                 </div>
               </div>
+            </div>
+
+            {/* 底部开跑按钮 */}
+            <div className="bottom-action">
+              <button className="start-run-button">
+                🏃 开跑
+              </button>
             </div>
           </section>
         )}
