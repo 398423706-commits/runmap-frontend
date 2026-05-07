@@ -120,9 +120,14 @@ function App() {
             </div>
 
             <div className="profile-content">
+              {/* 用户头像 */}
+              <div className="avatar-container">
+                <div className="avatar">🏃</div>
+              </div>
+
               <div className="profile-card">
                 <h2>用户信息</h2>
-                <p>用户名: Runner123</p>
+                <p><span className="stat-label">用户名:</span> <span className="stat-value">Runner123</span></p>
                 <p><span className="stat-label">总里程:</span> <span className="stat-value">245.6 km</span></p>
                 <p><span className="stat-label">打卡次数:</span> <span className="stat-value">28</span></p>
                 <p><span className="stat-label">跑步次数:</span> <span className="stat-value">42</span></p>

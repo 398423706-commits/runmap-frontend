@@ -1,0 +1,9 @@
+{
+  "source": "market",
+  "id": 54557,
+  "alias": "pde-checkpoint5-verify",
+  "intro": "PDE闯关体系第五关自动校验工具。当用户提到「第五关校验」「第五关自查」「PDE第五关」「检查第五关」「校验主题切换」「验证我的页面」或提供了类似 ulive-pde-explore-runmapfrontend-xxx.awp.sankuai.com 的链接时使用。帮助PDE闯关学员自动检测第五关是否通过，包括：我的页面是否白屏、是否有主题切换功能、切换主题后颜色是否真正变化、切换回去哪跑页面按钮样式是否同步变化。",
+  "updateTime": "1777510929000",
+  "downloadTime": 1778136091662,
+  "location": "project"
+}
